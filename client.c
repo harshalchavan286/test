@@ -10,6 +10,7 @@ int main(int argc,char *argv[])
 	char *rchar;
 	memset(final,0,MAX);
 	memset(buff,0,MAX);
+	//hello world
 	if(argv[1]==NULL)
 	{
 		printf("Please enter IP ADDRESS\n");
@@ -28,7 +29,7 @@ int main(int argc,char *argv[])
 			exit(0);
 		}
 	}
-	sd=socket(AF_INET,SOCK_STREAM,0);
+	//sd=socket(AF_INET,SOCK_STREAM,0);
 	if(sd<0)
 	{
 		perror("Socket creating errorn\n");
@@ -38,6 +39,7 @@ int main(int argc,char *argv[])
 	serveraddr.sin_family = AF_INET;
 	serveraddr.sin_port = htons(MYPORT);
 	serveraddr.sin_addr.s_addr= inet_addr(argv[1]);
+	// hello princess
 
 	if((connect(sd,(struct sockaddr*)&serveraddr,sizeof(serveraddr)))<0)
 	{
